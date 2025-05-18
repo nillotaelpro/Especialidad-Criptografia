@@ -21,14 +21,14 @@ const morseCode = {
 };
 
 function traducirAMorse() {
-  const texto = document.getElementById("inputText").value.toUpperCase();
-  let resultado = "";
+  const texto = document.getElementById("inputMorse").value.toUpperCase();
+  let resultadoMorse = "";
 
   for (let letra of texto) {
-    resultado += morseCode[letra] ? morseCode[letra] + " " : letra;
+    resultadoMorse += morseCode[letra] ? morseCode[letra] + " " : letra;
   }
 
-  document.getElementById("resultado").textContent = resultado.trim();
+  document.getElementById("resultadoMorse").textContent = resultadoMorse.trim();
 }
 window.traducirAMorse = traducirAMorse;
 
@@ -56,3 +56,17 @@ function traducirAMurcielago() {
   document.getElementById("resultadoMurcielago").textContent = resultadoMurcielago.trim();
 }
 window.traducirAMurcielago = traducirAMurcielago;
+
+function traducirAMichi() {
+  const texto = document.getElementById("inputMichi").value;
+  document.getElementById("resultadoMichi").textContent = texto;
+}
+
+window.traducirAMichi = traducirAMichi;
+
+function traducirA7Cruces() {
+  const texto = document.getElementById("input7Cruces").value;
+  document.getElementById("resultado7Cruces").textContent = texto;
+}
+
+window.traducirA7Cruces = traducirA7Cruces;

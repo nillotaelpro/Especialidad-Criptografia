@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'michi';
+  src: url('../public/ClaveMichi.otf') format('truetype');
+}
+@font-face {
+  font-family: 'clave7cruces';
+  src: url('../public/Clave7Cruces.otf') format('truetype');
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f8ff;
@@ -40,15 +49,32 @@ button {
   border-radius: 8px;
   word-wrap: break-word;
 }
+
 textarea {
   outline: none;
   resize: none;
 }
+
 .claves{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 h1, h2{
   text-align: center;
+}
+
+.michi{
+  font-family: 'michi', sans-serif;
+  font-size: 50px;
+}
+
+.morse{
+    font-size: 30px;
+}
+
+.cruces{
+  font-family: 'clave7cruces', sans-serif;
+  font-size: 50px;
 }
