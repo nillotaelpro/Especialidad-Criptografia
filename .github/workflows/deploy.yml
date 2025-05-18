@@ -38,6 +38,12 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Fix paths in all HTML files
+        run: |
+          for file in ./dist/*.html; do
+            sed -i 's|href="/|href="/Especialidad-Informatica/|g' "$file"
+            sed -i 's|src="/|src="/Especialidad-Informatica/|g' "$file"
+          done
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
