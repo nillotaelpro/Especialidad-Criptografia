@@ -1,1 +1,1 @@
-# Especialidad-Criptografia
+# Especialidad-Informatica
