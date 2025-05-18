@@ -18,17 +18,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Fix paths in all HTML files
-        run: |
-          for file in ./dist/*.html; do
-            sed -i 's|href="/|href="/Especialidad-Informatica/|g' "$file"
-            sed -i 's|src="/|src="/Especialidad-Informatica/|g' "$file"
-          done
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Cambia esto si tu carpeta de salida es diferente
+          publish_dir: ./dist  
 # name: Deploy static content to Pages
 
 # on:
